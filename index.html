@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Todo application implementing the Eisenhower Matrix method for task prioritization.">
     <title>Todo App</title>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
@@ -14,56 +17,66 @@
     >
   </head>
   <body class="body">
-    <div class="header">
+    <header class="header">
       <img class="header-image" src="./eisenhower-matrix.jpg">
-      <a
-        class="more-inf"
-        href="https://goal-life.com/page/method/matrix-eisenhower"
-        >Want more details?</a
-      >
-    </div>
-    <div class="main">
-      <p id="add-element">
-        <label class="task-label add-label" for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
-          <input class="task-input task" id="new-task" type="text">
-          <button class="button add-button">Add</button>
-        </div>
-      </p>
-      <h3 class="tasks-title">Todo</h3>
-      <ul class="list-items incomplete-tasks" id="incomplete-tasks">
-        <li class="task-item">
-          <input class="task-checkbox" type="checkbox">
-          <label class="task task-label">Pay Bills</label>
-          <input class="task task-input" type="text">
-          <button class="button edit-button">Edit</button>
-          <button class="button delete-button">
-            <img class="delete-button-image" src="./remove.svg">
-          </button>
-        </li>
-        <li class="task-item edit-mode">
-          <input class="task-checkbox" type="checkbox">
-          <label class="task task-label">Go Shopping</label>
-          <input class="task task-input" type="text" value="Go Shopping">
-          <button class="button edit-button">Save</button>
-          <button class="button delete-button">
-            <img class="delete-button-image" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-      <h3 class="tasks-title">Completed</h3>
-      <ul class="list-items completed-tasks" id="completed-tasks">
-        <li class="task-item">
-          <input class="task-checkbox" type="checkbox" checked>
-          <label class="task task-label completed-label">See the Doctor</label>
-          <input class="task task-input" type="text">
-          <button class="button edit-button"">Edit</button>
-          <button class="button delete-button">
-            <img class="delete-button-image" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-    </div>
+        <a
+          class="more-inf"
+          href="https://goal-life.com/page/method/matrix-eisenhower"
+        >Want more details?</a>
+    </header>
+
+    <main class="main">
+      <section id="add-element" aria-labelledby="add-task-title">
+        <h1 id="add-task-title" class="task-title hidden">Todo App</h1>
+        <form class="task-form" aria-label="Add new task">
+          <label class="task-label add-label" for="new-task">Add item</label>
+          <div class="task-row-wrapper">
+            <input class="task-input task" id="new-task" type="text" placeholder="">
+            <button class="button add-button" type="submit">Add</button>
+          </div>
+        </form>
+      </section>
+
+      <section aria-labelledby="todo-title">
+        <h2 id="todo-title" class="tasks-title">Todo</h2>
+        <ul class="list-items incomplete-tasks" id="incomplete-tasks">
+          <li class="task-item">
+            <input class="task-checkbox" type="checkbox" aria-label="Mark task as completed">
+            <label class="task task-label">Pay Bills</label>
+            <input class="task task-input" type="text" aria-label="Edit task">
+            <button class="button edit-button">Edit</button>
+            <button class="button delete-button">
+              <img class="delete-button-image" src="./remove.svg">
+            </button>
+          </li>
+          <li class="task-item edit-mode">
+            <input class="task-checkbox" type="checkbox" aria-label="Mark task as completed">
+            <label class="task task-label">Go Shopping</label>
+            <input class="task task-input" type="text" value="Go Shopping" aria-label="Edit task">
+            <button class="button edit-button">Save</button>
+            <button class="button delete-button">
+              <img class="delete-button-image" src="./remove.svg">
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="completed-title">
+        <h2 id="completed-title" class="tasks-title">Completed</h2>
+        <ul class="list-items completed-tasks" id="completed-tasks">
+          <li class="task-item">
+            <input class="task-checkbox" type="checkbox" checked aria-label="Mark task as incomplete">
+            <label class="task task-label completed-label">See the Doctor</label>
+            <input class="task task-input" type="text" aria-label="Edit task">
+            <button class="button edit-button">Edit</button>
+            <button class="button delete-button">
+              <img class="delete-button-image" src="./remove.svg">
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
