@@ -21,7 +21,8 @@
 }
 
 @media (max-width: 768px) {
-    .header { text-align: center;
+    .header { 
+      text-align: center;
   }
 }
 
@@ -41,16 +42,19 @@
   display: flex;
 }
 
-.incomplete-tasks, .completed-tasks {
+.incomplete-tasks,
+.completed-tasks {
   margin: 0;
   padding: 0px;
 }
 
-.task-item, .task-title {
+.task-item,
+.task-title {
   list-style: none;
 }
 
-.task-input,.button{
+.task-input,
+.button{
   outline: none;
 }
 
